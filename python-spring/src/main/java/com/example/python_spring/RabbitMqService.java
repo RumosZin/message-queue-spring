@@ -39,12 +39,12 @@ public class RabbitMqService {
         this.rabbitTemplate.convertAndSend(exchangeName, routingKey, messageDto);
     }
 
-    /**
-     * 1. Queue 에서 메세지를 구독
-     * 2. Consumer 역할
-     **/
-    @RabbitListener(queues = "${rabbitmq.queue.name}")
-    public void receiveMessage(MessageDto messageDto) {
-        log.info("**Message Received** : {}", messageDto.toString());
-    }
+//    /**
+//     * 1. Queue 에서 메세지를 구독
+//     * 2. Consumer 역할
+//     **/
+//    @RabbitListener(queues = "${rabbitmq.queue.name}")
+//    public void receiveMessage(MessageDto messageDto) {
+//        log.info("**Message Received** : {}", messageDto.toString());
+//    }
 }
